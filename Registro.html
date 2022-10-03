@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="InicioSesion.css">
+    <link rel="stylesheet" type="text/css" href="Registro.css">
     <title>
     </title>
 </head>
@@ -15,7 +15,7 @@
             <li>
                 <a href="#"> Registrar mascota</a>
                 <ul class="submenu">
-                    <li> <a href="MascotaPerdida.html"> Mascota perdida</a></li>
+                    <li> <a href="#"> Mascota perdida</a></li>
                     <li> <a href="#"> Mascota en adopción</a></li>
                 </ul>
             </li>
@@ -24,43 +24,36 @@
             <li> <a href="VerAnimales.html"> Ver animales</a></li>
         </ul>
     </nav>
+
     <div class="container">
         <div class="ImagenInicial">
        <center> <div class="circulo"></div></center>
-        <h2 class="Iniciar"><center>Iniciar sesión</center></h2>
-
-        
-        <center><img class="inicio_s" src="img/imagen_Inicio.jpg" alt="" /></center>
-
-
+        <h2 class="Iniciar"><center>Regístrate</center></h2>
+        <center><img class="inicio_s" src="img/registro.jpg" alt="" /></center>
         </div>
-        <div class="Formulario">
-            
+        <div class="formularioRegistro">
             <center> <div class="circulo2"></div></center>
-            <h2 class="Iniciar"><center>"Salvar a un perro no cambiará el mundo pero, sin duda, el mundo cambiará para él"</center></h2>
                 <div id="contenedor">
                     <div id="central">
                         <div id="login">
                             <form id="loginform">
-                                <input type="text" name="usuario" placeholder="Usuario" id="Usuario" required>
+                                <input type="text" name="nombre" placeholder="Nombre" id="Nombre" required>
+                                <input type="text" name="apellido" placeholder="apellido" id="Apellido" required>
+                                <input type="number" name="edad" placeholder="Edad" id="Edad" min="14" max="70" required>
+                                <input type="number" name="cédula" placeholder="Cédula" id="cedula"  required>
+                                <input type="text" name="Ciudad" placeholder="Ciudad" id="ciudad" required>
+                                <input type="text" name="correo" placeholder="correo" id="correo" required>
                                 <input type="password" placeholder="Contraseña" name="password" id="Contrasenia" required>
-                                <button type="submit" title="Ingresar" name="Ingresar">Ingresar</button>
+                                <button type="submit" title="Registrar" name="Registrar">Ingresar</button>
                             </form>
-                            <div class="pie-form">
-                                <a href="#">¿Olvidaste tu contraseña?</a>
-                                <a href="">Registrate</a>
-                            </div>
                         </div>
                     </div>
                 </div>
         </div>
     </div>
 
-    <script type="module" src="./firebase.js"> </script>
-    <script type="module"src="./main.js" ></script>
-    
-
 
 </body>
+
 
 </html>
