@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="InicioRegistro.css">
+    <script src="https://kit.fontawesome.com/2542acaf4c.js" crossorigin="anonymous"></script>
+    <title>
+    </title>
+</head>
+
+<body>
+
+<h2></h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+            <input type="text" name="nombre" placeholder="Nombre" id="Nombre" required>
+            <input type="text" name="apellido" placeholder="apellido" id="Apellido" required>
+            <input type="number" name="edad" placeholder="Edad" id="Edad" min="14" max="70" required>
+            <input type="number" name="cédula" placeholder="Cédula" id="cedula"  required>
+            <input type="text" name="Ciudad" placeholder="Ciudad" id="ciudad" required>
+            <input type="text" name="correo" placeholder="correo" id="correo" required>
+            <input type="password" placeholder="Contraseña" name="password" id="Contrasenia" required>
+			<button>Registrate</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Ingresa</h1>
+            <div class="social-container">
+				<a href="#" class="social"><i class="fa-solid fa-heart"></i>
+				<a href="#" class="social"><i class="fa-solid fa-paw"></i>
+				<a href="#" class="social"><i class="fa-solid fa-bone"></i>
+			</div>
+			<span>Ingresa con tu usuario y contraseña</span>
+			<input type="text" placeholder="Usuario" />
+			<input type="password" placeholder="Contraseña" />
+			<a href="#">¿Olvidaste tu contraseña?</a>
+			<button>Ingresar</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Bienvenido!</h1>
+                <div class="social-container2">
+                    <a href="#" class="social"><i class="fa-solid fa-heart"></i>
+                        <a href="#" class="social"><i class="fa-solid fa-paw"></i>
+                        <a href="#" class="social"><i class="fa-solid fa-bone"></i>
+                </div>
+				<p>"Salvar a un perro no cambiará el mundo pero, sin duda, el mundo cambiará para él"</p>
+				<button class="ghost" id="signIn"> Ingresa </button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hola, amigo de dos patas!</h1>
+				<p>¿No tienes cuenta? No te preocupes, crea una nueva cuenta en menos de 5 minutos!</p>
+				<button class="ghost" id="signUp">Crear nueva cuenta</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script type="module"src="./InicioRegistro.js" ></script>
+
+</body>
+
+</html>
