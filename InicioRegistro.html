@@ -34,13 +34,11 @@
 			</div>
 			<span>Ingresa con tu usuario y contraseña</span>
 			<input type="text" placeholder="Correo" id="correo" required/>
-			
 			<input type="password" placeholder="Contraseña" id="password" required/>
 			<a href="#">¿Olvidaste tu contraseña?</a>
 			<div id="button_inicio"> 
-				<button type="button" id="botonIngreso">Ingresar</button>
+				<button type="button" id="botonIngreso" >Ingresar</button>
 			</div>
-			
 		</form>
 	</div>
 	<div class="overlay-container">
@@ -120,6 +118,7 @@
   .then(() => {
   // Data saved successfully!
   alert('Usuario creado correctamente');
+
 })
 .catch((error) => {
   // The write failed...
@@ -156,7 +155,7 @@
   })
   .then(() => {
   // Data saved successfully!
-  alert('Usuario correcto');
+  location.href ="http://127.0.0.1:5500/VerAnimales.html";
 })
 .catch((error) => {
   // The write failed...

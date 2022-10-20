@@ -1,0 +1,50 @@
+body {
+    font-family: Helvetica;
+    background-image: url("img/perrito1\ \(1\)\ \(2\).jpg");
+    
+}
+.formulario{
+    width: 700px;
+    min-height: 666px;
+    height: auto;
+    background: #ffe5d9;
+    margin: 72px auto 0;
+    margin-top: auto;
+}
+
+.titulo {
+    font-size: 2rem;
+    background: none;
+    margin: 5px;
+  }
+
+.nombre, .descripcion, .direccion, .imagen{
+        font-size: 1 rem;
+        height: 30px;
+        width: 500px;
+        margin: 50px;
+        margin-top: 0.3cm;
+        margin-bottom: 0.3cm;
+}
+
+.u-label, .estado {
+    margin-left: 0.5cm;
+    margin-top: 10px;
+}
+
+.select {
+    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-left: 1.5cm;
+  }
+
+.boton {
+    background: #f4acb7;
+    padding:5px 15px;
+    font-size: 1.5rem;
+    border:0 none;
+    border-radius: 5px; 
+    color: black;
+    margin-left: 1.5cm;
+    margin-top: 1cm;
+  }

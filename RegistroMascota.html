@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html lang="es">
+    <head>
+        <meta charset="UTF-8>">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registrar mascota</title>
+        <link rel="stylesheet" href="RegistroMascota.css" media="screen">
+    </head>
+<body>
+    
+    
+    <div class="formulario">
+        <div class="titulo">
+            <font face="cambria"><center><h2 style="color:#9d8189">Registrar mascota perdida</h2></center></font>
+        </div>
+
+        <div class="contenedor">
+            <form>
+           <br> <font face="cambria" font size=4><label class="u-label">Nombre</label></font><font></font></br> 
+                  <input type="text" class="nombre" id="nombre" name="nombre">
+
+                  <br><font face="cambria" font size=4><label for="lang" class="estado">Estado mascota</label></br></font></font>
+                  <select name="estado" id="lang" class="select">
+                    <option value="herido">Herido</option>
+                    <option value="enfermo">Enfermo</option>
+                    <option value="bueno">Buen estado</option>
+                    <option value="desorientado">Desorientado</option>
+                  </select>
+
+           <br> <font face="cambria" font size=4><label class="u-label">Descripción</label></font></font> </br>
+                  <input type="text" id="descripcion" name="descripcion" class="descripcion" placeholder="Descripcion pequeña de caracteristicas físicas de la mascota">
+
+           <br> <font face="cambria" font size=4><label class="u-label">Dirección</label></font></font> </br>
+                  <input type="text" id="direccion" name="direccion" class="direccion" placeholder="Calle 43# 56-65">
+        
+            <br> <font face="cambria" font size=4><label class="u-label">Imagen</label></font></font> </br>
+                <input placeholder="Enter your message" rows="4" cols="50" id="imagen" name="imagen" class="imagen" required="required" type="file" accept="IMAGES">
+ 
+                <br><button type="submit" title="Ingresar" class="boton" id="guardar" name="Ingresar">Ingresar</button></br>
+        </div>
+    </div>
+
+
+<script type="module" src="./firebase.js"> </script>
+
+</body>
+</html>
