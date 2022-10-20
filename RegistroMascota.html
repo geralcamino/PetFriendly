@@ -8,6 +8,22 @@
         <link rel="stylesheet" href="RegistroMascota.css" media="screen">
     </head>
 <body>
+    <nav class="navegacion">
+        <ul class="menu">
+            <li> <b><a href="index.html"> PETFRIENDLY</a> </b></li>
+            <li> <a href="#"> Recomendaciones</a></li>
+            <li>
+                <a href="InicioRegistro.html"> Registrar mascota</a>
+                <ul class="submenu">
+                    <li> <a href="InicioRegistro.html"> Mascota perdida</a></li>
+                    <li> <a href="InicioRegistro.html"> Mascota en adopción</a></li>
+                </ul>
+            </li>
+            <li> <a href="InicioRegistro.html"> Registrarse</a></li>
+            <li> <a href="InicioRegistro.html"> Iniciar sesión</a></li>
+            <li> <a href="VerAnimales.html"> Ver animales</a></li>
+        </ul>
+    </nav>
     
     
     <div class="formulario">
@@ -16,7 +32,7 @@
         </div>
 
         <div class="contenedor">
-            <form>
+            <form id="animalesPerdidos">
            <br> <font face="cambria" font size=4><label class="u-label">Nombre</label></font><font></font></br> 
                   <input type="text" class="nombre" id="nombre" name="nombre">
 
@@ -37,12 +53,67 @@
             <br> <font face="cambria" font size=4><label class="u-label">Imagen</label></font></font> </br>
                 <input placeholder="Enter your message" rows="4" cols="50" id="imagen" name="imagen" class="imagen" required="required" type="file" accept="IMAGES">
  
-                <br><button type="submit" title="Ingresar" class="boton" id="guardar" name="Ingresar">Pruebas</button></br>
+                <br><button type="button" title="Ingresar" class="boton" id="guardar" name="enviar">Enviar</button></br>
+            </form>
         </div>
     </div>
 
+    <script type="module">
+        console.log("todo ok")
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+        import { getDatabase, set,ref, update, push, child  } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
+    
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDnpnXJsxMxn33RV2rPjGMDD1gnwDQD4z0",
+          authDomain: "petfriendly-5a8d3.firebaseapp.com",
+          projectId: "petfriendly-5a8d3",
+          storageBucket: "petfriendly-5a8d3.appspot.com",
+          messagingSenderId: "990910792060",
+          appId: "1:990910792060:web:c71269018d234c4fd5a4f9"
+        };
 
-<script type="module" src="./firebase.js"> </script>
+
+        // Initialize Firebase
+	const app = initializeApp(firebaseConfig);
+	const database = getDatabase(app);
+
+    guardar.addEventListener('click',(e)=> 
+    {
+        var nombre= document.getElementById('nombre').value;
+        var lang = document.getElementById('lang').value;
+        var descripcion = document.getElementById('descripcion').value;
+        var direccion = document.getElementById('direccion').value;
+        var imagen = document.getElementById('imagen').value;
+
+        const userId= push(child(ref(database), 'mascotaPerdida')).Key;
+
+        set(ref(database, 'mascotaPerdida/' + userId), {
+        nombre:nombre,
+        lang:lang,
+        descripcion:descripcion,
+        direccion:direccion,
+        imagen:imagen
+  }) .then(() => {
+  // Data saved successfully!
+  alert('Mascota registrada correctamente');
+
+})
+.catch((error) => {
+  // The write failed...
+  alert(error);
+});
+  
+
+
+    })
+
+    </script>
+
 
 </body>
 </html>
