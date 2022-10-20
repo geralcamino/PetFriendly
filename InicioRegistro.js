@@ -9,10 +9,3 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
-
-document.addEventListener('DOMContentLoaded', function(){
-    let formulario = document.getElementById('login');
-    formulario.addEventListener('submit', function() {
-      formulario.reset();
-    });
-  });
