@@ -1,0 +1,467 @@
+* {
+    margin:0;
+    padding:0; 
+    
+    }
+    
+    body {
+        font-family: Helvetica;
+        background: #9d8189
+        
+    }
+    
+    .navegacion {
+        width: 1300px;
+        margin: 10px auto;
+        background: #ffe5d9;
+    }
+    
+    .navegacion ul {
+        list-style:none; 
+    }
+    
+    .menu li{
+        display: inline-block;
+    }
+    
+    .menu li a {
+        display: block;
+        padding: 15px 50px;
+        color: black;
+        text-decoration: none;
+    }
+    
+    .menu li a:hover {
+        background: #f4acb7;
+    }
+    
+    .submenu {
+        position: absolute;
+        background: #ffe5d9;
+        display: none;
+    
+    }
+    
+    .menu li:hover .submenu {
+        display:block;
+    }
+    
+    .submenu li a {
+        display:block;
+        padding:15px;
+    }
+    
+    .slider {
+        width: 75%;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    .slider ul {
+        display: flex;
+        padding: 0;
+        width: 400%;
+        animation: cambio 20s infinite alternate linear;
+    }
+    
+        .slider li {
+            width: 100%;
+            list-style: none;
+        }
+    
+        .slider img {
+            width: 100%;
+        }
+    
+        .slider:nth-child(2) ul {
+            animation-timing-function: steps(4);
+        }
+    
+    @keyframes cambio {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+    75% { margin-left: -300%; }
+    100% { margin-left: -300%; }
+    }
+    
+.container1 {
+        margin-top: 50px;
+        margin-left: 13%;
+        width: 75%;
+        height: 500px;
+        background-image: url(/img/fondorecom.PNG);
+        font-family: Britannic;
+        font-size: 40px;
+       
+ }
+
+ .division{
+    background-color: #ffe5d9;
+    width: 35%;
+    height: 500px;
+    margin: 0 0 0 1%;
+ }
+    
+.division img{
+        margin: 30px;
+        margin-top: 35px;    
+}
+
+
+
+.imagen {
+    margin: 10% 0% 0% 1%;
+
+}
+
+.snip1325 {
+    position: relative;
+    overflow: hidden;
+    margin: 30px;
+    height: 270px;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .snip1325 img {
+    height: 270px;
+    position: absolute;
+    right: -15%;
+    -webkit-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+  }
+  .snip1325:hover img,
+  .snip1325.hover img {
+    -webkit-transform: translateX(130px);
+    transform: translateX(130px);
+  }
+
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%,-50%);
+    width: 20%;
+    height: 50%;
+    background: #f4acb7;
+    overflow: hidden;
+}
+.card .imgBx,
+.card .details {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    box-sizing: border-box;
+    transition: .5s;
+}
+.card .imgBx {
+    top: 0;
+    left: 0;
+}
+.card:hover .imgBx {
+    top: 0;
+    left: -100%;
+}
+.card .imgBx img {
+    width: 100%;
+}
+.card .details {
+    background: #f4acb7;
+    top: 0;
+    left: 100%;
+    padding: 0px 20px;
+}
+.card:hover .details {
+    top: 0;
+    left: 0%;
+}
+
+.card .details p {
+    margin: 20px 0 0;
+    color: #fff;
+    font-size: x-large;
+}
+
+/*card 2*/
+.card2 {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+    width: 20%;
+    height: 50%;
+    background: #9d8189;
+    overflow: hidden;
+}
+.card2 .imgBx,
+.card2 .details {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    box-sizing: border-box;
+    transition: .5s;
+}
+.card2 .imgBx {
+    top: 0;
+    left: 0;
+}
+.card2:hover .imgBx {
+    top: 0;
+    left: -100%;
+}
+.card2 .imgBx img {
+    width: 100%;
+}
+.card2 .details {
+    background: #9d8189;
+    top: 0;
+    left: 100%;
+    padding: 0px 20px;
+}
+.card2:hover .details {
+    top: 0;
+    left: 0%;
+}
+
+.card2 .details p {
+    margin: 20px 0 0;
+    color: #fff;
+    font-size: large;
+}* {
+    margin:0;
+    padding:0; 
+    
+    }
+    
+    body {
+        font-family: Helvetica;
+        background: #9d8189
+        
+    }
+    
+    .navegacion {
+        width: 1300px;
+        margin: 10px auto;
+        background: #ffe5d9;
+    }
+    
+    .navegacion ul {
+        list-style:none; 
+    }
+    
+    .menu li{
+        display: inline-block;
+    }
+    
+    .menu li a {
+        display: block;
+        padding: 15px 50px;
+        color: black;
+        text-decoration: none;
+    }
+    
+    .menu li a:hover {
+        background: #f4acb7;
+    }
+    
+    .submenu {
+        position: absolute;
+        background: #ffe5d9;
+        display: none;
+    
+    }
+    
+    .menu li:hover .submenu {
+        display:block;
+    }
+    
+    .submenu li a {
+        display:block;
+        padding:15px;
+    }
+    
+    .slider {
+        width: 75%;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    .slider ul {
+        display: flex;
+        padding: 0;
+        width: 400%;
+        animation: cambio 20s infinite alternate linear;
+    }
+    
+        .slider li {
+            width: 100%;
+            list-style: none;
+        }
+    
+        .slider img {
+            width: 100%;
+        }
+    
+        .slider:nth-child(2) ul {
+            animation-timing-function: steps(4);
+        }
+    
+    @keyframes cambio {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+    75% { margin-left: -300%; }
+    100% { margin-left: -300%; }
+    }
+    
+.container1 {
+        margin-top: 50px;
+        margin-left: 13%;
+        width: 75%;
+        height: 500px;
+        background-image: url(/img/fondorecom.PNG);
+        font-family: Britannic;
+        font-size: 40px;
+       
+ }
+
+ .division{
+    background-color: #ffe5d9;
+    width: 35%;
+    height: 500px;
+    margin: 0 0 0 1%;
+ }
+    
+.division img{
+        margin: 30px;
+        margin-top: 35px;    
+}
+
+
+
+.imagen {
+    margin: 10% 0% 0% 1%;
+
+}
+
+.snip1325 {
+    position: relative;
+    overflow: hidden;
+    margin: 30px;
+    height: 270px;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .snip1325 img {
+    height: 270px;
+    position: absolute;
+    right: -15%;
+    -webkit-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+  }
+  .snip1325:hover img,
+  .snip1325.hover img {
+    -webkit-transform: translateX(130px);
+    transform: translateX(130px);
+  }
+
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%,-50%);
+    width: 20%;
+    height: 50%;
+    background: #f4acb7;
+    overflow: hidden;
+}
+.card .imgBx,
+.card .details {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    box-sizing: border-box;
+    transition: .5s;
+}
+.card .imgBx {
+    top: 0;
+    left: 0;
+}
+.card:hover .imgBx {
+    top: 0;
+    left: -100%;
+}
+.card .imgBx img {
+    width: 100%;
+}
+.card .details {
+    background: #f4acb7;
+    top: 0;
+    left: 100%;
+    padding: 0px 20px;
+}
+.card:hover .details {
+    top: 0;
+    left: 0%;
+}
+
+.card .details p {
+    margin: 20px 0 0;
+    color: #fff;
+    font-size: x-large;
+}
+
+/*card 2*/
+.card2 {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+    width: 20%;
+    height: 50%;
+    background: #9d8189;
+    overflow: hidden;
+}
+.card2 .imgBx,
+.card2 .details {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    box-sizing: border-box;
+    transition: .5s;
+}
+.card2 .imgBx {
+    top: 0;
+    left: 0;
+}
+.card2:hover .imgBx {
+    top: 0;
+    left: -100%;
+}
+.card2 .imgBx img {
+    width: 100%;
+}
+.card2 .details {
+    background: #9d8189;
+    top: 0;
+    left: 100%;
+    padding: 0px 20px;
+}
+.card2:hover .details {
+    top: 0;
+    left: 0%;
+}
+
+.card2 .details p {
+    margin: 20px 0 0;
+    color: #fff;
+    font-size: large;
+}

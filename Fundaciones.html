@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Fundaciones.css">
+    <title>
+    </title>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function(){
+            $('.zoom').hover(function() {
+                $(this).addClass('transition');
+            }, function() {
+                $(this).removeClass('transition');
+            });
+        });
+        </script>
+    <nav class="navegacion">
+        <ul class="menu">
+            <li> <b><a href="index.html"> PETFRIENDLY</a> </b></li>
+            <li> <a href="#"> Recomendaciones</a></li>
+            <li>
+                <a href="#"> Registrar mascota</a>
+                <ul class="submenu">
+                    <li> <a href="#"> Mascota perdida</a></li>
+                    <li> <a href="#"> Mascota en adopción</a></li>
+                </ul>
+            </li>
+            <li> <a href="#"> Registrarse</a></li>
+            <li> <a href="InicioSesion.html"> Iniciar sesión</a></li>
+            <li> <a href="VerAnimales.html"> Ver animales</a></li>
+        </ul>
+    </nav>
+    <div class="contenedor">
+        <figure>
+            <img src="img/fundacion.jpg">
+                <div class="wrap-texto">
+                    <h1>Fundaciones</h1>
+                    <p>
+                        Los perros son los que nos une al paraíso. No conocen negatividad, celosía ni descontento.
+                    </p>
+                </div>
+
+        </figure>
+    </div>
+
+    <div class="fundaciones">
+        <div class="fundacionuno">
+            <center><img src="/img/corazonanimal.png" class="zoom"></center>
+            <font size=3>
+                <font face="cambria">
+                    <center>
+                        <p>
+                            Es una fundación sin animo de lucro que se encarga de dar albergue a perros y gatos del 
+                            área metropolitana, en situación de abandono 
+                            y vulnerabilidad con el fin de encontrar hogares responsables y amorosos.
+                        </p>
+                    </center>
+                </font>
+            </font>
+            
+            <button class="btnir" onclick="location.href='https://fundacioncorazonanimal.org/'"> Ir </button>
+        </div>
+        <div class="fundaciondos">
+            <center><img src="/img/orca.PNG" class="zoom"></center>
+            <font size=3>
+                <font face="cambria">
+                    <center>
+                        <p>
+                            Es la Organización por el Respeto y el Cuidado de los animales, es la materialización de
+                             la voluntad de varias personas que se unieron en pos de ayudar de manera solidaria, a los
+                              animales de calle y víctimas de violencia de la Ciudad de Medellín.
+                        </p>
+                    </center>
+                </font>
+            </font>
+            <button class="btnir2" onclick="location.href='https://fundacionorca.org/'"> Ir </button>
+        </div>
+            
+        <div class="fundaciontres">
+            <center><img src="/img/danino.PNG" class="zoom"></center>
+            <font size=3>
+                <font face="cambria">
+                    <center>
+                        <p>
+                            Rescate Animal
+                            Objetivo: evitar el sufrimiento de los animales por medio de la adopción, esterilización y concientización 
+                        </p>
+                    </center>
+                </font>
+            </font>
+            <button class="btnir3" onclick="location.href='https://www.instagram.com/fundaciondanino/?hl=es'"> Ir </button>
+        </div>
+    </div>
+</body>
+</html>
