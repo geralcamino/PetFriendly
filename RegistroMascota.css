@@ -3,6 +3,8 @@ body {
     background-color: #9d8189;
     
 }
+
+
 .formulario{
     width: 700px;
     min-height: 666px;
@@ -18,13 +20,23 @@ body {
     margin: 5px;
   }
 
-.nombre, .descripcion, .direccion, .imagen{
+.nombre, .direccion, .imagen{
         font-size: 1 rem;
         height: 30px;
         width: 500px;
         margin: 50px;
         margin-top: 0.3cm;
         margin-bottom: 0.3cm;
+}
+
+.descripcion{
+    font-size: 1 rem;
+    height: 70px;
+    width: 500px;
+    margin: 50px;
+        margin-top: 0.3cm;
+        margin-bottom: 0.3cm;
+
 }
 
 .u-label, .estado {
@@ -48,6 +60,18 @@ body {
     margin-left: 1.5cm;
     margin-top: 1cm;
   }
+
+  .boton1 {
+    background:none;
+    padding:15px 50px;
+    border:0 none;
+    color: black;
+
+  }
+
+.boton1:hover{
+    background: #f4acb7;
+}
 
   * {
     margin:0;

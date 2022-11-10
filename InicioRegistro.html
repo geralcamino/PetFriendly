@@ -69,7 +69,7 @@
 	console.log("todo ok")
 	// Import the functions you need from the SDKs you need
 	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-	import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
+	import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
 	import { getDatabase, set,ref, update   } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
 
 	// TODO: Add SDKs for Firebase products that you want to use
@@ -89,6 +89,8 @@
 	const app = initializeApp(firebaseConfig);
 	const auth = getAuth();
 	const database = getDatabase(app);
+
+	
 
     registro.addEventListener('click', (e) =>
 	{
@@ -155,7 +157,7 @@
   })
   .then(() => {
   // Data saved successfully!
-  location.href ="http://127.0.0.1:5500/RegistroMascota.html";
+  location.href ="http://127.0.0.1:5500/index2.html";
 })
 .catch((error) => {
   // The write failed...
@@ -168,7 +170,30 @@
 	alert(errorMessage);
   });
   document.getElementById('login').reset();
+
+
+
+  onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    const uid = user.uid;
+	
+    // ...
+  } else {
+    // User is signed out
+    // ...
+  }
+});
+
+
+
 })
+
+
+
+
+
 
 
 

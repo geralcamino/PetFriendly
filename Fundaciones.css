@@ -212,7 +212,7 @@ img.zoom {
 
     .contenedor{
     
-        width: 400px;
+        width: 1200px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -220,7 +220,7 @@ img.zoom {
     }
 
    .contenedor figure{
-    margin-left: 25%;
+    margin-left: 10%;
     padding: 0px;
     position: relative;
     height: 370px;

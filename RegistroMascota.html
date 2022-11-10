@@ -6,22 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registrar mascota</title>
         <link rel="stylesheet" href="RegistroMascota.css" media="screen">
+        <script src="https://kit.fontawesome.com/2542acaf4c.js" crossorigin="anonymous"></script>
     </head>
 <body>
     <nav class="navegacion">
         <ul class="menu">
-            <li> <b><a href="index.html"> PETFRIENDLY</a> </b></li>
-            <li> <a href="#"> Recomendaciones</a></li>
+            <li> <b><a href="index2.html"> PETFRIENDLY</a> </b></li>
+            <li> <a href="Recomendaciones.html"> Recomendaciones</a></li>
             <li>
-                <a href="InicioRegistro.html"> Registrar mascota</a>
+                <a href="#"> Registrar mascota</a>
                 <ul class="submenu">
-                    <li> <a href="InicioRegistro.html"> Mascota perdida</a></li>
-                    <li> <a href="InicioRegistro.html"> Mascota en adopción</a></li>
+                    <li> <a href="RegistroMascota.html"> Mascota perdida</a></li>
+                    <li> <a href="#"> Mascota en adopción</a></li>
                 </ul>
             </li>
-            <li> <a href="InicioRegistro.html"> Registrarse</a></li>
-            <li> <a href="InicioRegistro.html"> Iniciar sesión</a></li>
-            <li> <a href="VerAnimales.html"> Ver animales</a></li>
+            <li> <a href="VerAnimales.html"> Ver animales</a></li> 
+            <button type="button" title="salir" class="boton1" id="salir" name="salir"> <i class="fa-solid fa-right-from-bracket"></i>Cerrar sesión</button>
         </ul>
     </nav>
     
@@ -45,10 +45,10 @@
                   </select>
 
            <br> <font face="cambria" font size=4><label class="u-label">Descripción</label></font></font> </br>
-                  <input type="text" id="descripcion" name="descripcion" class="descripcion" placeholder="Descripcion pequeña de caracteristicas físicas de la mascota">
+                  <input type="textarea" rows="10" cols="40" id="descripcion" name="descripcion" class="descripcion" placeholder="Descripcion pequeña de caracteristicas físicas de la mascota" required>
 
            <br> <font face="cambria" font size=4><label class="u-label">Dirección</label></font></font> </br>
-                  <input type="text" id="direccion" name="direccion" class="direccion" placeholder="Calle 43# 56-65">
+                  <input type="text" id="direccion" name="direccion" class="direccion" placeholder="Calle 43# 56-65" required>
         
             <br> <font face="cambria" font size=4><label class="u-label">Imagen</label></font></font> </br>
                 <input placeholder="Enter your message" rows="4" cols="50" id="imagen" name="imagen" class="imagen" required="required" type="file" accept="IMAGES">
@@ -63,7 +63,8 @@
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
         import { getDatabase, set,ref, update, push, child  } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
-    
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
+
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
       
@@ -81,23 +82,34 @@
         // Initialize Firebase
 	const app = initializeApp(firebaseConfig);
 	const database = getDatabase(app);
+    const auth = getAuth();
 
-    guardar.addEventListener('click',(e)=> 
+    salir.addEventListener('click', (e) =>{ 
+
+        auth.signOut().then(() => {
+
+        location.href ="http://127.0.0.1:5500/index.html";
+        console.log('sign Out');
+        console.log("------------USUARIO CERRADO");
+        })
+    })
+
+        var nombre= document.getElementById('nombre');
+        var lang = document.getElementById('lang');
+        var descripcion = document.getElementById('descripcion');
+        var direccion = document.getElementById('direccion');
+        var imagen = document.getElementById('imagen');
+
+
+    function InsertData()
     {
-        var nombre= document.getElementById('nombre').value;
-        var lang = document.getElementById('lang').value;
-        var descripcion = document.getElementById('descripcion').value;
-        var direccion = document.getElementById('direccion').value;
-        var imagen = document.getElementById('imagen').value;
-
-        const userId= push(child(ref(database), 'mascotaPerdida')).Key;
-
-        set(ref(database, 'mascotaPerdida/' + userId), {
-        nombre:nombre,
-        lang:lang,
-        descripcion:descripcion,
-        direccion:direccion,
-        imagen:imagen
+        
+        set(ref(database, 'mascotaPerdida/' + nombre.value), {
+        nombre:nombre.value,
+        lang:lang.value,
+        descripcion:descripcion.value,
+        direccion:direccion.value,
+        imagen:imagen.value
   }) .then(() => {
   // Data saved successfully!
   alert('Mascota registrada correctamente');
@@ -107,11 +119,14 @@
   // The write failed...
   alert(error);
 });
-  
+    }
+   
+    
 
 
-    })
+ guardar.addEventListener('click', InsertData);
 
+    
     </script>
 
 
