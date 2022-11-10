@@ -12,6 +12,7 @@ body {
     background: #ffe5d9;
     margin: 72px auto 0;
     margin-top: auto;
+    margin-bottom: 1cm;
 }
 
 .titulo {
@@ -20,7 +21,7 @@ body {
     margin: 5px;
   }
 
-.nombre, .direccion, .imagen{
+.nombre, .direccion, .imagen, .numero{
         font-size: 1 rem;
         height: 30px;
         width: 500px;
@@ -57,7 +58,7 @@ body {
     border:0 none;
     border-radius: 5px; 
     color: black;
-    margin-left: 1.5cm;
+    margin-left: 7.5cm;
     margin-top: 1cm;
   }
 

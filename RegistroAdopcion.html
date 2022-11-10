@@ -18,7 +18,7 @@
                 <a href="#"> Registrar mascota</a>
                 <ul class="submenu">
                     <li> <a href="RegistroMascota.html"> Mascota perdida</a></li>
-                    <li> <a href="RegistroAdopcion.html"> Mascota en adopción</a></li>
+                    <li> <a href="#"> Mascota en adopción</a></li>
                 </ul>
             </li>
             <li> <a href="VerAnimales.html"> Ver animales</a></li> 
@@ -29,7 +29,7 @@
     
     <div class="formulario">
         <div class="titulo">
-            <font face="cambria"><center><h2 style="color:#9d8189">Registrar mascota perdida</h2></center></font>
+            <font face="cambria"><center><h2 style="color:#9d8189">Registrar mascota en adopción</h2></center></font>
         </div>
 
         <div class="contenedor">
@@ -38,14 +38,13 @@
                   <input type="text" class="nombre" id="nombre" name="nombre">
 
                   <br> <font face="cambria" font size=4><label class="u-label">Número de contacto</label></font><font></font></br> 
-                  <input type="text" class="numero" id="numero" name="numero">      
+                  <input type="text" class="numero" id="numero" name="numero">  
 
                   <br><font face="cambria" font size=4><label for="lang" class="estado">Estado mascota</label></br></font></font>
                   <select name="estado" id="lang" class="select">
-                    <option value="herido">Herido</option>
                     <option value="enfermo">Enfermo</option>
                     <option value="bueno">Buen estado</option>
-                    <option value="desorientado">Desorientado</option>
+                    
                   </select>
 
            <br> <font face="cambria" font size=4><label class="u-label">Descripción</label></font></font> </br>
@@ -99,7 +98,7 @@
     })
 
         var nombre= document.getElementById('nombre');
-        var numero = document.getElementById('numero');
+        var numero=document.getElementById('numero');
         var lang = document.getElementById('lang');
         var descripcion = document.getElementById('descripcion');
         var direccion = document.getElementById('direccion');
@@ -109,7 +108,7 @@
     function InsertData()
     {
         
-        set(ref(database, 'mascotaPerdida/' + numero.value), {
+        set(ref(database, 'mascotaAdopcion/' + numero.value), {
         nombre:nombre.value,
         lang:lang.value,
         descripcion:descripcion.value,
@@ -134,10 +133,7 @@
     
 
 
-
-
- guardar.addEventListener('click', InsertData) ;
-
+ guardar.addEventListener('click', InsertData);
  guardar.addEventListener('click',function(){
  animalesPerdidos.reset()
  ;})

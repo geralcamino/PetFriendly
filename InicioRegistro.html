@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="InicioRegistro.css">
     <script src="https://kit.fontawesome.com/2542acaf4c.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>
     </title>
 </head>
@@ -35,7 +36,7 @@
 			<span>Ingresa con tu usuario y contraseña</span>
 			<input type="text" placeholder="Correo" id="correo" required/>
 			<input type="password" placeholder="Contraseña" id="passwordlogin" required/>
-			<a href="#">¿Olvidaste tu contraseña?</a>
+			<a href="#"></a>
 			<div id="button_inicio"> 
 				<button type="button" id="botonIngreso" >Ingresar</button>
 			</div>
@@ -69,7 +70,7 @@
 	console.log("todo ok")
 	// Import the functions you need from the SDKs you need
 	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-	import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
+	import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
 	import { getDatabase, set,ref, update   } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
 
 	// TODO: Add SDKs for Firebase products that you want to use
@@ -119,12 +120,20 @@
   })
   .then(() => {
   // Data saved successfully!
-  alert('Usuario creado correctamente');
+  swal({
+	title: 'Genial!',
+   text:'Ahora eres parte de la familia PetFriendly',
+   icon: 'success'
+ });
 
 })
 .catch((error) => {
   // The write failed...
-  alert(error);
+  swal({
+	title: 'oh!',
+   text:'Parece que algo ha fallado, intenta de nuevo ',
+   icon: 'error'
+ });
 });
 	
   })
@@ -132,7 +141,11 @@
     const errorCode = error.code;
     const errorMessage = error.message;
     // ..
-	alert(errorMessage);
+	swal({
+	title: 'oh!',
+   text:'Parece que algo ha fallado, intenta de nuevo ',
+   icon: 'error'
+ });
   });
 
   document.getElementById('registroForm').reset();
@@ -161,17 +174,38 @@
 })
 .catch((error) => {
   // The write failed...
-  alert(error);
+  swal({
+	title: 'oh!',
+   text:'Parece que algo ha fallado, intenta de nuevo ',
+   icon: 'error'
+ });
 });
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-	alert(errorMessage);
+	swal({
+   title: 'oh!',
+   text:'Parece que algo ha fallado, intenta de nuevo ',
+   icon: 'error'
+
+ });
   });
   document.getElementById('login').reset();
 
+  function recuperarContra(){
 
+	sendPasswordResetEmail(auth, correo)
+  .then(() => {
+    // Password reset email sent!
+    // ..
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
+  }
 
   onAuthStateChanged(auth, (user) => {
   if (user) {
